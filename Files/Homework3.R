@@ -20,8 +20,11 @@ mean(x)
 
 var(x)
 sd(x)
-coeff<-coef(var(x))
-coeff
+cv<-sd(x)/mean(x)
+cv
+sderror<-sd(x)/sqrt(length(x))
+sderror
+
 
 #Question 6
 y<-c(44.2, 30.1, 40.5, 43.3, 41.2, 41.0, 41.4, 40.1, 39.4, 43.6, 39.4, 39.7,
@@ -44,5 +47,7 @@ mean(y)
 
 var(y)
 sd(y)
-coeff<-coef(var(y))
-coeff
+cv<-sd(y)/mean(y)
+cv
+sderror<-sd(y)/sqrt(length(y))
+sderror
