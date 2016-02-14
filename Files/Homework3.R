@@ -13,8 +13,9 @@ table<-cbind(x.freq,x.relfreq)
 table
 hist(x.relfreq, xlab="Relative Frequency")
 
+mode<-table(as.vector(x))
+names(mode)[mode == max(mode)]              
 median(x)
-getmode(x)
 mean(x)
 
 var(x)
@@ -35,3 +36,13 @@ y.relfreq
 table2<-cbind(y.relfreq)
 table2
 hist(y.relfreq, xlab="Relative Frequency")
+
+mode<-table(as.vector(y))
+names(mode)[mode == max(mode)] 
+median(y)
+mean(y)
+
+var(y)
+sd(y)
+coeff<-coef(var(y))
+coeff
