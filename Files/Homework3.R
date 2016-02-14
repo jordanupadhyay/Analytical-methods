@@ -32,8 +32,6 @@ y.freq
 y.relfreq <- y.freq/21
 y.relfreq
 
-table1<-cbind(y,y.relfreq)
-table1
 table2<-cbind(y.relfreq)
 table2
 hist(y.relfreq, xlab="Relative Frequency")
