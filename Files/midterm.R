@@ -58,3 +58,7 @@ df
 out = aov(xbar ~ feed, data=df)
 summary(out)
 
+
+#question 14
+
+
