@@ -54,3 +54,7 @@ xbar = c(162.4444,214,246.3077,329.9091)
 s2 = c(1621.778,2703.600,3173.897,2610.491)
 df = data.frame(feed, ni, sumx,sumx2,xbar,s2) 
 df
+
+out = aov(xbar ~ feed, data=df)
+summary(out)
+
