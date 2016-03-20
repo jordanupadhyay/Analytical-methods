@@ -79,6 +79,7 @@ sumxy = sum(x*y)
 n = length(y)
 
 regress = data.frame(y,x)
+regress
 simpreg <- lm(y ~ x, data=regress)
 
 
