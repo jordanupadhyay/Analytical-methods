@@ -60,5 +60,45 @@ summary(out)
 
 
 #question 14
+trees
+
+trees["X"] <- NA
+trees$X <- trees$Height*(trees$Girth)^2
+trees
+
+x = trees$X
+y = trees$Volume
+
+plot(x,y, xlab = "X", ylab = "Volume")
+
+sumy = sum(y)
+sumx = sum(x)
+sumy2 = sum(y*y)
+sumx2 = sum(x*x)
+sumxy = sum(x*y)
+n = length(y)
+
+regress = data.frame(y,x)
+simpreg <- lm(y ~ x, data=regress)
 
 
+print(simpreg)
+anova(simpreg)
+simpreg_sum <- summary(simpreg)
+simpreg_sum
+
+# EXTRACT AND PRINT THE COEFFICIENTS (B0 AND B1)
+beta <- simpreg_sum$coef
+beta
+# Find and print sums of squares
+ssct = sumy2 - (sumy*sumy/n)
+ssr = beta[2] * (sumxy-(sumx*sumy/n))
+sse = ssct-ssr
+mse = sse/(n-2)
+rsq = ssr/ssct
+sum_squares = data.frame(ssct,ssr,sse,mse,rsq) 
+sum_squares
+
+
+plot(x,y,ylab="volume",xlab="X")
+abline(simpreg)
