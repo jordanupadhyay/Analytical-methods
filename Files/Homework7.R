@@ -14,22 +14,22 @@ red = lm(h ~ d)
 summary(red)
 anova(red)
 print(Ftest(full,red))
-# EXTRACT AND PRINT THE COEFFICIENTS (B0 AND B1)
+
 beta <- full_sum$coef
 beta
-# EXTRACT AND PRINT THE RESIDUALS
+
 r <- resid(full)
 r
-# COMPUTE AND PRINT Y-HAT (THE PREDICTED VALUE OF Y CONDITIONAL ON X)
+
 yhat <- fitted(full)
 yhat
-# COMPUTE AND PRINT SSE
+
 SSE <- sum(r^2)
 SSE
-# EXTRACT AND PRINT THE SQUARE ROOT OF MSE
+
 rootmse <- full_sum$sig
 rootmse
-#  PLOT DATA WITH FITTED REGRESSION LINES AND REGRESSION 
+
 x = seq(min(d),max(d),0.001)   
 xbar = mean(d)
 xbar
@@ -53,22 +53,22 @@ red = lm(h ~ w)
 summary(red)
 anova(red)
 print(Ftest(full2,red))
-# EXTRACT AND PRINT THE COEFFICIENTS (B0 AND B1)
+
 beta <- full2_sum$coef
 beta
-# EXTRACT AND PRINT THE RESIDUALS
+
 r <- resid(full2)
 r
-# COMPUTE AND PRINT Y-HAT (THE PREDICTED VALUE OF Y CONDITIONAL ON X)
+
 yhat <- fitted(full2)
 yhat
-# COMPUTE AND PRINT SSE
+
 SSE <- sum(r^2)
 SSE
-# EXTRACT AND PRINT THE SQUARE ROOT OF MSE
+
 rootmse <- full2_sum$sig
 rootmse
-#  PLOT DATA WITH FITTED REGRESSION LINES AND REGRESSION 
+
 x = seq(min(d),max(d),0.001)   
 xbar = mean(d)
 xbar
@@ -92,22 +92,22 @@ red = lm(h ~ v)
 summary(red)
 anova(red)
 print(Ftest(full3,red))
-# EXTRACT AND PRINT THE COEFFICIENTS (B0 AND B1)
+
 beta <- full3_sum$coef
 beta
-# EXTRACT AND PRINT THE RESIDUALS
+
 r <- resid(full3)
 r
-# COMPUTE AND PRINT Y-HAT (THE PREDICTED VALUE OF Y CONDITIONAL ON X)
+
 yhat <- fitted(full3)
 yhat
-# COMPUTE AND PRINT SSE
+
 SSE <- sum(r^2)
 SSE
-# EXTRACT AND PRINT THE SQUARE ROOT OF MSE
+
 rootmse <- full3_sum$sig
 rootmse
-#  PLOT DATA WITH FITTED REGRESSION LINES AND REGRESSION 
+
 x = seq(min(d),max(d),0.001)   
 xbar = mean(d)
 xbar
