@@ -1,0 +1,153 @@
+# MULTIPLE REGRESSION
+h = c(124,137,78,84,54,50,35,32,30,28,21,24,22,23,18,20)
+d = c(0,0,5,5,10,10,15,15,20,20,25,25,30,30,35,35)
+w = d^2
+v = d^3
+
+SSE <- function(input.lm) {return(sum(resid(input.lm)^2))}
+#model 1
+full = lm(h ~ d)
+summary(full)
+full_sum = summary(full)
+anova(full)
+red = lm(h ~ d)
+summary(red)
+anova(red)
+print(Ftest(full,red))
+# EXTRACT AND PRINT THE COEFFICIENTS (B0 AND B1)
+beta <- full_sum$coef
+beta
+# EXTRACT AND PRINT THE RESIDUALS
+r <- resid(full)
+r
+# COMPUTE AND PRINT Y-HAT (THE PREDICTED VALUE OF Y CONDITIONAL ON X)
+yhat <- fitted(full)
+yhat
+# COMPUTE AND PRINT SSE
+SSE <- sum(r^2)
+SSE
+# EXTRACT AND PRINT THE SQUARE ROOT OF MSE
+rootmse <- full_sum$sig
+rootmse
+#  PLOT DATA WITH FITTED REGRESSION LINES AND REGRESSION 
+x = seq(min(d),max(d),0.001)   
+xbar = mean(d)
+xbar
+ssx = sum((d-xbar)^2)
+ssx
+mse = rootmse^2
+mse
+n = length(d)
+n
+
+sumry = data.frame(n,xbar,ssx,SSE,mse,rootmse)
+sumry
+
+SSE <- function(input.lm) {return(sum(resid(input.lm)^2))}
+#model 2
+full2 = lm(h ~ d + w)
+summary(full2)
+full2_sum = summary(full2)
+anova(full2)
+red = lm(h ~ w)
+summary(red)
+anova(red)
+print(Ftest(full2,red))
+# EXTRACT AND PRINT THE COEFFICIENTS (B0 AND B1)
+beta <- full2_sum$coef
+beta
+# EXTRACT AND PRINT THE RESIDUALS
+r <- resid(full2)
+r
+# COMPUTE AND PRINT Y-HAT (THE PREDICTED VALUE OF Y CONDITIONAL ON X)
+yhat <- fitted(full2)
+yhat
+# COMPUTE AND PRINT SSE
+SSE <- sum(r^2)
+SSE
+# EXTRACT AND PRINT THE SQUARE ROOT OF MSE
+rootmse <- full2_sum$sig
+rootmse
+#  PLOT DATA WITH FITTED REGRESSION LINES AND REGRESSION 
+x = seq(min(d),max(d),0.001)   
+xbar = mean(d)
+xbar
+ssx = sum((d-xbar)^2)
+ssx
+mse = rootmse^2
+mse
+n = length(d)
+n
+
+sumry = data.frame(n,xbar,ssx,SSE,mse,rootmse)
+sumry
+
+SSE <- function(input.lm) {return(sum(resid(input.lm)^2))}
+#model 3
+full3 = lm(h ~ d + w + v)
+summary(full3)
+full3_sum = summary(full3)
+anova(full3)
+red = lm(h ~ v)
+summary(red)
+anova(red)
+print(Ftest(full3,red))
+# EXTRACT AND PRINT THE COEFFICIENTS (B0 AND B1)
+beta <- full3_sum$coef
+beta
+# EXTRACT AND PRINT THE RESIDUALS
+r <- resid(full3)
+r
+# COMPUTE AND PRINT Y-HAT (THE PREDICTED VALUE OF Y CONDITIONAL ON X)
+yhat <- fitted(full3)
+yhat
+# COMPUTE AND PRINT SSE
+SSE <- sum(r^2)
+SSE
+# EXTRACT AND PRINT THE SQUARE ROOT OF MSE
+rootmse <- full3_sum$sig
+rootmse
+#  PLOT DATA WITH FITTED REGRESSION LINES AND REGRESSION 
+x = seq(min(d),max(d),0.001)   
+xbar = mean(d)
+xbar
+ssx = sum((d-xbar)^2)
+ssx
+mse = rootmse^2
+mse
+n = length(d)
+n
+
+sumry = data.frame(n,xbar,ssx,SSE,mse,rootmse)
+sumry
+
+
+#STRATIFIED RANDOM SAMPLING
+strat1 = c(97, 67, 42, 125, 25, 92, 105, 86, 27, 43, 45, 59, 53, 21)
+N1 = 80
+n1 = 14
+mean1 = mean(strat1)
+mean1
+
+strat2 = c(155, 67, 96, 256, 47, 310, 236, 220, 352, 142, 190)
+N2 = 70
+n2 = 12
+mean2 = mean(strat2)
+mean2
+
+strat3 = c(142, 256, 310, 440, 495, 510, 320, 396, 196)
+N3 = 50
+n3 =9
+mean3 = mean(strat3)
+mean3
+
+strat4 = c(167,655,220,540,780)
+N4 = 30
+n4 = 5
+mean4 = mean(strat4)
+mean4
+
+y_bar = ((N1*mean1)+(N2*mean2)+(N3*mean3)+(N4*mean4))/230
+y_bar
+
+
