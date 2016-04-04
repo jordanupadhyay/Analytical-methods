@@ -1,4 +1,4 @@
-# MULTIPLE REGRESSION
+#MULTIPLE REGRESSION
 h = c(124,137,78,84,54,50,35,32,30,28,21,24,22,23,18,20)
 d = c(0,0,5,5,10,10,15,15,20,20,25,25,30,30,35,35)
 w = d^2
@@ -120,6 +120,7 @@ n
 
 sumry = data.frame(n,xbar,ssx,SSE,mse,rootmse)
 sumry
+
 
 
 #STRATIFIED RANDOM SAMPLING
