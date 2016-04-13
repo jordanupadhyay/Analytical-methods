@@ -75,6 +75,9 @@ ybar.r
 s2.r = 0.89958159*mse*(0.01388889 + ((x1bar-x2bar)^2)/(71*s2.x2)) + 0.044*(s2.y2/717)
 s2.r
 
+s = sqrt(s2.r)
+ci = 2*s
+ci
 total = N*y2bar - N*beta[2]*(x2bar-x1bar)
 total
 
