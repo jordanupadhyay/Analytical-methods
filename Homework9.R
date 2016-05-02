@@ -13,3 +13,7 @@ t = (VMR-1)/s_vmr  #[1] -2.55021
 qt(0.975,14)
 
 #Question 5
+vh = c(24550,30700,45370,53450,62060)
+h = c(1,3,4,5,6)
+dist = h*50
+plot(dist,vh, main="Semivariogram of Elevation", xlab="Distance(delta*h)")
