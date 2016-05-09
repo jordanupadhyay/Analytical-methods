@@ -66,6 +66,15 @@ yhat
 plot(ba,vol)
 abline(simpreg, col="red")
 
+#Question 4
+s21 = (11920000000 - (480000^2)/20)/19
+s21
+s22 = (24040000000 - (840000^2)/30)/29
+s22
+sst = (((110*(s21/20)*(90))/20)+((168*(s22/30)*(138))/30))*(1/(278^2))
+sst 
+bound = 2*sqrt(sst)
+bound
 #Question 5
 vol5 = c(40,37,42,45,49,41,37,35,50,43)
 xbar = mean(vol5)
