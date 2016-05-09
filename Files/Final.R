@@ -57,17 +57,54 @@ sb1_sq
 sb1 = sqrt(sb1_sq)
 sb1
 
-
-
 r <- resid(simpreg)
 r
-
-
 
 yhat <- fitted(simpreg)
 yhat
 
-
-
 plot(ba,vol)
 abline(simpreg, col="red")
+
+#Question 5
+vol5 = c(40,37,42,45,49,41,37,35,50,43)
+xbar = mean(vol5)
+s = sd(vol5)
+xbar
+s
+
+t = -qt(0.025,9)
+t
+
+(t*s)/sqrt(10)
+41.9-3.59
+
+#Question 6
+(30*28)/15
+15/28
+s2=(56*(1-0.5)*(1-0.536))/(0.5*0.536)
+2*sqrt(s2)
+
+#Question 8
+rhinos = c(8, 1, 19, 22, 2, 12, 0, 1, 20, 19)
+xbar_rhino = mean(rhinos)
+s2_rhino = var(rhinos)
+xbar_rhino
+s2_rhino
+
+VMR = s2_rhino/xbar_rhino
+VMR
+s_vmr = sqrt(2/(10-1))
+s_vmr
+bigt = (VMR-1)/s_vmr
+bigt
+qt(0.025,9)
+
+#Question 9
+s = sqrt(8.1)
+2*s
+#Question 10
+vh = c(0.0006,0.0012,0.0019,0.0020)
+h = c(1,2,3,4)
+dist = h*30
+plot(h,vh, main="Variogram")
